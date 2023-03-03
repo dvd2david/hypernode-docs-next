@@ -71,21 +71,21 @@ In our support documentation you will find detailed information about installing
 
 ### Step 4 – Set up Hypernode Managed Vhosts
 
-The Hypernode Managed Vhosts (HMV) system is currently enabled by default on all new booted Hypernodes (all Hypernodes created after 01-05-2020).
+The Hypernode Managed Vhosts (HMV) system is currently enabled by default on all newly booted Hypernodes (all Hypernodes created after 01-05-2020).
 
-Check if you have HMV enabled by running this command:
+You can check if you have HMV enabled by running this command:
 
 `hypernode-systemctl settings managed_vhosts_enabled`
 
-If so, it will give the following output:
+If so, it will return the following output:
 
 `managed_vhosts_enabled is set to value True`
 
-If this is not enabled, skip the part below.
+If this is not enabled, you can skip the part below.
 
-Due to this configuration it is required to add a new vhost for every domain you want to link to your Hypernode. So you need to configure your DNS correctly and add a new vhost for the domain.
+With this configuration it is required to add a new vhost for every domain you want to link to your Hypernode. So you need to configure your DNS correctly and add a new vhost for the domain.
 
-To add a new vhost, for example the domainname [www.example.com](http://www.example.com), to your configuration, you can simply run the command `hypernode-manage-vhosts www.example.com`. This will create a new vhost configuration in `/data/web/nginx/www.example.com/`, using the Magento 2 template.
+To add a new vhost, for example the domain name [www.example.com](http://www.example.com), to your configuration, you can simply run the command `hypernode-manage-vhosts www.example.com`. This will create a new vhost configuration in `/data/web/nginx/www.example.com/`, using the Magento 2 template.
 
 Please note that defining the vhosts '[www.example.com](http://www.example.com)', does not automatically add 'example.com' as a vhost. You will have to manually define a vhost for this. Since most people simply want their 'example.com' to redirect to '[www.example.com](http://www.example.com)', you can simply use the `--type wwwizer` argument to set this up. This will configure the vhost to redirect all traffic to the www-version of the domain.
 
@@ -97,7 +97,7 @@ You can find how to change your base URLs for Magento 1 [here](../../ecommerce-a
 
 You can find how to change your base URLs for Magento 2 [here](../../ecommerce-applications/magento-2/how-to-change-your-magento-2-base-urls.md).
 
-Please note: when you have an SSL certificate and use the secure base URL you should change the unsecure base URLs to HTTPS as well. This could result in conflicts when you leave this on HTTP.
+Please note: when you have an SSL certificate and use the secure base URL you should change the unsecure base URLs to HTTPS as well. This could result in conflicts when you leave this on HTTP. More information can be found [here](../../hypernode-platform/ssl/how-to-use-ssl-certificates-on-your-hypernode-when-ordered-via-hypernode-nl.html#changing-your-base-urls).
 
 ### Step 6 – Configure DNS
 
@@ -139,6 +139,6 @@ Convinced about Hypernode? [Convert your trial into a paid hosting plan](../../a
 
 ## In Need of Support?
 
-We encourage you to have a look at our extensive Hypernode support documentation on [support.hypernode.com](../../index.md). Here you will find useful information and tips and tricks on e.g. how to import a shop to Hypernode, recommended tools for developers, etc.
+We encourage you to have a look at our extensive Hypernode support documentation on [support.hypernode.com](../../index.md). Here you will find useful information as well as tips and tricks on e.g. how to import a shop to Hypernode, recommended tools for developers, etc.
 
 Do you have questions about our Hypernode platform or would you like to give us some feedback? We would love to hear from you! Please send an email to [support@hypernode.com](mailto:support@hypernode.com) and we will get back to you. Our sales team and support team are available on weekdays from 8:00 AM until 18:00 PM CET/CEST (UTC+1/UTC+2).
